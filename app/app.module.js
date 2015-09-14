@@ -2,7 +2,8 @@ var app = angular.module("myApp",   [
                                         'ui.bootstrap', 
                                         'ngAnimate', 
                                         'ui.router', 
-                                        'myAppHomeCtrl'
+                                        'myAppHomeCtrl',
+                                        'homeService'
                                     ]);
 
 app.controller('navCtrl', ['$scope', function($scope){
@@ -21,6 +22,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             url: '/home',
             templateUrl: 'app/components/home/partial-home.html',
             controllerUrl: 'app/components/home/homeCtrl'
+            //seviceUrl: 'app/components/home/homeService'
         })
         
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================

@@ -7,11 +7,10 @@
             </div>
         </div>
     </header>
-
+    <hr>
     <!-- Page Content -->
     <div class="container" ng-controller="homeCtrl" >
 
-        <hr class="featurette-divider">
         <div ng-repeat="value in dataset">
             <!-- First Featurette -->
             <div class="featurette" id="about">
@@ -21,5 +20,6 @@
                 </h2>
                 <p class="lead">{{value.text}}</p>
             </div>
+        <hr class="featurette-divider">
         </div>
     </div>
