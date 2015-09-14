@@ -1,4 +1,9 @@
-var app = angular.module("myApp", ['ui.bootstrap', 'ngAnimate', 'ui.router']);
+var app = angular.module("myApp",   [
+                                        'ui.bootstrap', 
+                                        'ngAnimate', 
+                                        'ui.router', 
+                                        'myAppHomeCtrl'
+                                    ]);
 
 app.controller('navCtrl', ['$scope', function($scope){
 	$scope.menuItems = [{title: 'About'}, {title: 'Services'}, {title: 'Contact'}];
@@ -14,7 +19,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
         // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
             url: '/home',
-            templateUrl: 'app/components/home/partial-home.html'
+            templateUrl: 'app/components/home/partial-home.html',
+            controllerUrl: 'app/components/home/homeCtrl'
         })
         
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================

@@ -1,46 +1,25 @@
 <!-- Full Width Image Header -->
-    <header class="header-image">
+    <header class="header-image" ng-controller="homeCtrl">
         <div class="headline">
             <div class="container">
-                <h1>One Page Wonder</h1>
-                <h2>Will Knock Your Socks Off</h2>
+                <h1>{{header}}</h1>
+                <h2>{{subheading}}</h2>
             </div>
         </div>
     </header>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container" ng-controller="homeCtrl" >
 
         <hr class="featurette-divider">
-
-        <!-- First Featurette -->
-        <div class="featurette" id="about">
-            <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
-            <h2 class="featurette-heading">This First Heading
-                <span class="text-muted">Will Catch Your Eye</span>
-            </h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <!-- Second Featurette -->
-        <div class="featurette" id="services">
-            <img class="featurette-image img-circle img-responsive pull-left" src="http://placehold.it/500x500">
-            <h2 class="featurette-heading">The Second Heading
-                <span class="text-muted">Is Pretty Cool Too.</span>
-            </h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <!-- Third Featurette -->
-        <div class="featurette" id="contact">
-            <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
-            <h2 class="featurette-heading">The Third Heading
-                <span class="text-muted">Will Seal the Deal.</span>
-            </h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <div ng-repeat="value in dataset">
+            <!-- First Featurette -->
+            <div class="featurette" id="about">
+                <img class="featurette-image img-circle img-responsive" ng-class-odd="'pull-right'" ng-class-even="'pull-left'" ng-src="{{value.imgUrl}}">
+                <h2 class="featurette-heading">{{value.heading}}
+                    <span class="text-muted">{{value.subheading}}</span>
+                </h2>
+                <p class="lead">{{value.text}}</p>
+            </div>
         </div>
     </div>
