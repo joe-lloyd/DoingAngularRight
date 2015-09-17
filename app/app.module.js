@@ -5,5 +5,7 @@ var app = angular.module("myApp",   [
                                         'myAppHomeCtrl',
                                         'myAppHomeService',
                                         'myAppNavbarDirective',
-                                        'navbarService'
+                                        'myAppNavbarService',
+                                        'myAppLoginCtrl',
+                                        'myAppLoginService'
                                     ]);

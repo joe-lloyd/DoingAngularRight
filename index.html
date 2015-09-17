@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 <head>
-	<title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>My Web App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<!-- Angular links -->
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 	<!-- angularBootstrap link -->
 	<script type="text/javascript" src="assets/js/ui-bootstrap-tpls-0.13.4.js"></script>
 </head>
 <body>
-    <!-- Navigation Bar-->
-    <nav-dir></nav-dir>
+	<!-- Navigation Bar-->
+	<nav-dir></nav-dir>
 
-    <!-- Angular Templates called here -->
-    <div ui-view></div>
+	<!-- Angular Templates called here -->
+	<div ui-view></div>
 
-    <div class="container">
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2015</p>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <!-- /.container -->
+	<div class="container">
+		<!-- Footer -->
+		<footer>
+			<div class="row">
+				<div class="col-lg-12">
+					<p>Copyright &copy; Your Website 2015</p>
+					<p><a ui-sref="Login">Admin Login</a></p>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- /.container -->
 
-    <!-- Angular Modules -->
-    <script type="text/javascript" src="app/app.module.js"></script>
-    <script type="text/javascript" src="app/app.routes.js"></script>
-    <script type="text/javascript" src="app/components/home/homeCtrl.js"></script>
-    <script type="text/javascript" src="app/components/home/homeService.js"></script>
-    <script type="text/javascript" src="app/shared/navigation-bar/navbarDirective.js"></script>
-    <script type="text/javascript" src="app/shared/navigation-bar/navbarService.js"></script>
+	<!-- Angular Modules -->
+	<script type="text/javascript" src="app/app.module.js"></script>
+	<script type="text/javascript" src="app/app.routes.js"></script>
+	<script type="text/javascript" src="app/components/home/homeCtrl.js"></script>
+	<script type="text/javascript" src="app/components/home/homeService.js"></script>
+	<script type="text/javascript" src="app/shared/navigation-bar/navbarDirective.js"></script>
+	<script type="text/javascript" src="app/shared/navigation-bar/navbarService.js"></script>
+	<script type="text/javascript" src="app/components/login/loginCtrl.js"></script>
+	<script type="text/javascript" src="app/components/login/loginService.js"></script>
 </body>
 </html>

@@ -28,6 +28,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
         .state('Contact', {
             url: '/Contact',
             templateUrl: 'app/components/contact/contact.html'
+        })
+
+        // LOGIN PAGE ======================================================
+        .state('Login', {
+            url: '/Login',
+            templateUrl: 'app/components/login/login.html'
         });
 
 });

@@ -1,4 +1,4 @@
-angular.module('navbarService', [])
+angular.module('myAppNavbarService', [])
 
 .factory('navbarFactory', [function(){
 	return{
