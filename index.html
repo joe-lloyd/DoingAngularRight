@@ -13,33 +13,8 @@
 	<script type="text/javascript" src="assets/js/ui-bootstrap-tpls-0.13.4.js"></script>
 </head>
 <body>
-
-
-<!-- Navigation -->
-    <nav class="navbar navbar-inverse" role="navigation">
-        <div class="container" ng-controller="navCtrl">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed" class="navbar-toggle">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" ui-sref="home">Start Bootstrap</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div collapse="navCollapsed" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav" ng-repeat="value in menuItems">
-                    <li>
-                        <a ui-sref="{{value.title}}">{{value.title}}</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    <!-- Navigation Bar-->
+    <nav-dir></nav-dir>
 
     <!-- Angular Templates called here -->
     <div ui-view></div>
@@ -56,10 +31,12 @@
     </div>
     <!-- /.container -->
 
-	<!-- Angular Modules -->
-	<script type="text/javascript" src="app/app.module.js"></script>
+    <!-- Angular Modules -->
+    <script type="text/javascript" src="app/app.module.js"></script>
     <script type="text/javascript" src="app/app.routes.js"></script>
     <script type="text/javascript" src="app/components/home/homeCtrl.js"></script>
     <script type="text/javascript" src="app/components/home/homeService.js"></script>
+    <script type="text/javascript" src="app/shared/navigation-bar/navbarDirective.js"></script>
+    <script type="text/javascript" src="app/shared/navigation-bar/navbarService.js"></script>
 </body>
 </html>

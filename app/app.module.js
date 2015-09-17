@@ -1,12 +1,9 @@
 var app = angular.module("myApp",   [
-                                        'ui.bootstrap', 
-                                        'ngAnimate', 
-                                        'myAppRouter', 
+                                        'ui.bootstrap',
+                                        'ngAnimate',
+                                        'myAppRouter',
                                         'myAppHomeCtrl',
-                                        'myAppHomeService'
+                                        'myAppHomeService',
+                                        'myAppNavbarDirective',
+                                        'navbarService'
                                     ]);
-
-app.controller('navCtrl', ['$scope', function($scope){
-	$scope.menuItems = [{title: 'About'}, {title: 'Services'}, {title: 'Contact'}];
-	
-}]);
